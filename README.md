@@ -1,9 +1,10 @@
-# DumpX v0.0
-Dump your C/C++ code with vim</br>
+# DumpX v0.1
+Dump your C/C++ code with vim without rebuild all project</br>
 
 Released under GPL v3
 
 ## Revision
+0.1 Add only assembly, add partial disassembly
 0.0 initial</br>
 
 ## How To
@@ -38,7 +39,11 @@ let g:dumpxCC='gcc'
 ```
 for setting default flags
 ```
-let g:dumpxCFLAGS
+let g:dumpxCFLAGS = ''
+```
+for setting mode, only assembly/mixmode/partial
+```
+let g:dumpxMode = 1
 ```
 help
 ```
