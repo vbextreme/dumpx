@@ -48,7 +48,11 @@ function! DumpX(where)
 	let @a = system( g:dumpxCC . ' -g ' . g:dumpxCFLAGS . ' -Wa,' . l:asmode . ' -c ' . expand('%:p') . ' -o /tmp/vim.dumpx.' . expand('%') . l:filter)
 	
 	if a:where ==# "down"
-		below new 
+		below new
+	elseif a:where ==# "right"
+		below vnew
+	elseif a:where ==# "left"
+		vnew
 	else
 		new
 	endif
@@ -70,7 +74,10 @@ command DumpXTop :call DumpX('up')
 command DXT :call DumpX('up')
 command DumpXBottom :call DumpX('down')
 command DXB :call DumpX('down')
-
+command DumpXRight :call DumpX('right')
+command DXR :call DumpX('right')
+command DumpXLeft :call DumpX('left')
+command DXL :call DumpX('left')
 
 
 

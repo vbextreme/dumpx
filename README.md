@@ -4,7 +4,8 @@ Dump your C/C++ code with vim without rebuild all project</br>
 Released under GPL v3
 
 ## Revision
-0.1 Add only assembly, add partial disassembly
+0.2 Add split left and right</br>
+0.1 Add only assembly, add partial disassembly</br>
 0.0 initial</br>
 
 ## How To
@@ -32,6 +33,22 @@ dump current file in bottom window and jump to line</br>
 or
 ```
 :DumpXBottom
+```
+dump current file in left window and jump to line</br>
+```
+:DXL
+```
+or
+```
+:DumpXLeft
+```
+dump current file in right window and jump to line</br>
+```
+:DXR
+```
+or
+```
+:DumpXRight
 ```
 for setting default compiler
 ```

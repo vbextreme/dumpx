@@ -27,17 +27,22 @@ CONTENTS                                                       *clam-contents*
 ==============================================================================
 1. Usage                                                          *DumpXUsage*
 
-The function DumpX accept one argument for positioning window on up or down 
-from  current window: >
-
+The function DumpX accept one argument for positioning window on up,down,left,
+right. From  current window: >
     :call DumpX('up')
-	:call DumpX('Down')
+    :call DumpX('Down')
+    :call DumpX('left')
+    :call DumpX('right')
 
 You can use command with same effect: >
-	:DumpXTop
-	:DXT
-	:DumpXBottom
-	:DXB
+    :DumpXTop
+    :DXT
+    :DumpXBottom
+    :DXB
+    :DumpXLeft
+    :DXL
+    :DumpXRight
+    :DXR
 
 DumpX build only current file in /tmp to get assembly code.
 You can configure building with global var dumpxCC, dumpxCFLAGS, dumpxMode
@@ -103,6 +108,8 @@ GitHub: http://github.com/sjl/clam.vim/
 ==============================================================================
 6. Changelog                                                  *DumpxChangelog*
 
+v0.2
+    * Add split right and left 
 v0.1
     * Add only assembly, add partial disassembly
 v0.0
