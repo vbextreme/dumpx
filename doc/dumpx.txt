@@ -1,0 +1,93 @@
+*dumpx.txt* create new window with mix of assembly and C and jump in current line disassembled
+
+                        ____                      __  __ ~
+                       |  _ \ _   _ _ __ ___  _ __\ \/ / ~
+                       | | | | | | | '_ ` _ \| '_ \\  /  ~
+                       | |_| | |_| | | | | | | |_) /  \  ~
+                       |____/ \__,_|_| |_| |_| .__/_/\_\ ~
+                                             |_|        
+
+
+                        Simple way to dump your C/C++ code
+
+
+
+==============================================================================
+CONTENTS                                                       *clam-contents*
+
+    1. Usage ........................... |DumpXUsage|
+    2. Configuration ................... |DumpXConfiguration|
+        2.1 g:dumpxCC .................. |DumpXConfiguration_dumpxCC|
+        2.2 g:dumpxCFLAGS .............. |DumpXConfiguration_dumpxCFLAGS|
+    3. License ......................... |DumpXLicense|
+    4. Bugs ............................ |DumpXBugs|
+    5. Contributing .................... |DumpXContributing|
+    6. Changelog ....................... |DumpXChangelog|
+
+==============================================================================
+1. Usage                                                          *DumpXUsage*
+
+The function DumpX accept one argument for positioning window on up or down 
+from  current window: >
+
+    :call DumpX('up')
+	:call DumpX('Down')
+
+You can use command with same effect: >
+	:DumpXTop
+	:DXT
+	:DumpXBottom
+	:DXB
+
+DumpX build only current file in /tmp to get assembly code.
+You can configure building with global var dumpxCC and dumpxCFLAGS 
+
+==============================================================================
+2. Configuration                                          *DumpXConfiguration*
+
+You can configure the following settings to change how DumpX works.
+
+------------------------------------------------------------------------------
+2.1 g:dumpxCC                                     *DumpXConfiguration_dumpxCC*
+
+Set this to change default compiler: >
+
+    let g:dumpxCC = 'gcc'
+
+Default: 'gcc'
+
+------------------------------------------------------------------------------
+2.2 g:dumpxCFLAGS                             *DumpXConfiguration_dumpxCFLAGS*
+
+Set this to change default compiler option: >
+
+    let g:dumpxCFLAGS = '-O3'
+
+Default: ''
+
+==============================================================================
+3. License                                                      *DumpXLicense*
+
+DumpX is GPLv3 licensed.
+
+==============================================================================
+4. Bugs                                                            *DumpXBugs*
+
+If you find a bug please post it on the issue tracker:
+http://github.com//
+
+==============================================================================
+5. Contributing                                            *DumpXContributing*
+
+Think you can make this plugin better?  Awesome!  Fork it on GitHub and send 
+a pull request.
+
+GitHub: http://github.com/sjl/clam.vim/
+
+==============================================================================
+6. Changelog                                                  *DumpxChangelog*
+
+v0.0
+    * Initial release.
+
+==============================================================================
