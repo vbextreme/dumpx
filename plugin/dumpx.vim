@@ -26,7 +26,7 @@ endif
 
 "mode 0 == only assembly
 "mode 1 == mix C and assembly and jump
-"mode 2 == oly assembly current line of source
+"mode 2 == only assembly current line of source
 if !exists('g:dumpxMode')
 	let g:dumpxMode = 1
 endif
