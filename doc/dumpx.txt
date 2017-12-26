@@ -19,6 +19,7 @@ CONTENTS                                                       *clam-contents*
         2.1 g:dumpxCC .................. |DumpXConfiguration_dumpxCC|
         2.2 g:dumpxCFLAGS .............. |DumpXConfiguration_dumpxCFLAGS|
         2.3 g:dumpxMode ................ |DumpXConfiguration_dumpxMode|
+        2.4 g:dumpxYCM ................. |DumpXConfiguration_dumpxYCM|
     3. License ......................... |DumpXLicense|
     4. Bugs ............................ |DumpXBugs|
     5. Contributing .................... |DumpXContributing|
@@ -43,6 +44,9 @@ You can use command with same effect: >
     :DXL
     :DumpXRight
     :DXR
+
+Automatic load CFlags: >
+    :DXAF
 
 DumpX build only current file in /tmp to get assembly code.
 You can configure building with global var dumpxCC, dumpxCFLAGS, dumpxMode
@@ -86,6 +90,14 @@ Disassembly only current line
 
 Default: 1
 
+------------------------------------------------------------------------------
+2.4 g:dumpxYCM                                   *DumpXConfiguration_dumpxYCM*
+
+Select file YCM: >
+    let g:dumpxYCM = '/your/path/.ycm.py'
+
+Default: 'default'
+
 ==============================================================================
 3. License                                                      *DumpXLicense*
 
@@ -108,6 +120,8 @@ GitHub: http://github.com/sjl/clam.vim/
 ==============================================================================
 6. Changelog                                                  *DumpxChangelog*
 
+v0.3
+    * Add auto cflags for ycm, auto center match
 v0.2
     * Add split right and left 
 v0.1
