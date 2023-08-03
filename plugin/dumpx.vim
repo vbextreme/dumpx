@@ -21,20 +21,12 @@ if !exists('g:dumpxCFLAGS')
 	let g:dumpxCFLAGS = ''
 endif
 
-if !exists('g:dumpxYCM')
-	let g:dumpxYCM='default'
-endif
-
 "mode 0 == only assembly
 "mode 1 == mix C and assembly and jump
 "mode 2 == only assembly current line of source
 if !exists('g:dumpxMode')
 	let g:dumpxMode = 1
 endif
-
-function! DumpXAutoFlags()
-	let g:dumpxCFLAGS = system('~/.vim/bundle/dumpx/plugin/autoycm.pl ' . g:dumpxYCM)
-endfunction
 
 "create new window and puts mix C code and assembly, go to current line
 function! DumpX(where)
@@ -82,7 +74,3 @@ command DumpXRight :call DumpX('right')
 command DXR :call DumpX('right')
 command DumpXLeft :call DumpX('left')
 command DXL :call DumpX('left')
-command DXAF :call DumpXAutoFlags()
-
-
-
