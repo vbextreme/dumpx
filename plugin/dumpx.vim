@@ -50,7 +50,7 @@ function! DumpX(where)
 		let l:filter = " | awk '/[ \t]*" . l:cbl . ":[a-zA-Z0-9_\/]*/{flag=1;next}/[ \t]*" . l:ncbl . ":[a-zA-Z0-9_\/]*/{flag=0}flag'"
 	endif
 
-	let @a = system( g:dumpxCC . ' -g ' . g:dumpxCFLAGS . ' -Wa,' . l:asmode . ' -c ' . expand('%:p') . ' -o /tmp/vim.dumpx.' . expand('%') . l:filter)
+	let l:asm = system( g:dumpxCC . ' -g ' . g:dumpxCFLAGS . ' -Wa,' . l:asmode . ' -c ' . expand('%:p') . l:filter)
 	
 	if a:where ==# "down"
 		below new
@@ -63,7 +63,7 @@ function! DumpX(where)
 	endif
 	setlocal buftype=nofile bufhidden=hide noswapfile
 	normal! G
-	execute "put a"
+	execute "put =l:asm"
 	
 	setf dumpx
 	
