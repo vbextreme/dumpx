@@ -62,14 +62,12 @@ function! DumpX(where)
 		new
 	endif
 	setlocal buftype=nofile bufhidden=hide noswapfile
-	normal! G
 	execute "put =l:asm"
+	1d
 	
 	setf dumpx
 	
-	"call cursor(1,1)
-	
-	if g:dumpxMode == 1
+	if g:dumpxMode == 2
 		execute '?[ \t]*' . l:cbl . ':[a-zA-Z0-9_\/]*' . expand('%') . '/'
 		normal! zt
 	endif
