@@ -39,7 +39,7 @@ function! DumpX(where)
 		let l:filter = " | awk '/[ \t]*" . l:lnum . ":[a-zA-Z0-9_\/]*/{flag=1;next}/[ \t]*" . l:lnext . ":[a-zA-Z0-9_\/]*/{flag=0}flag'"
 	endif
 
-	let l:asm = system( g:dumpxCC . ' -g ' . g:dumpxCFLAGS . ' -Wa,' . l:asmode . ' -c ' . expand('%:p') . ' -o /tmp/vim.dumpx.' . expand('%') . l:filter)
+	let l:asm = system( g:dumpxCC . ' -g ' . g:dumpxCFLAGS . ' -Wa,' . l:asmode . ' -c ' . expand('%:p') . ' -o /tmp/vim.dumpx.' . l:fname . l:filter)
 
 	if a:where ==# "down"
 		below new
